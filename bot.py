@@ -18,7 +18,7 @@ async def on_message(message):
     elif message.content.upper().startswith('GO'):
         args = message.content.split(" ")
         print(args[1:])
-        if args[:1] == ['suck', 'a', 'dick'] or args[1:] == ['kill', 'yourself']:
+        if args[1:] == ['suck', 'a', 'dick'] or args[1:] == ['kill', 'yourself']:
             await client.send_message(message.channel, "no, you")
 
 
