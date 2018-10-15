@@ -24,7 +24,7 @@ async def on_message(message):
         await client.send_message(message.channel, "Thilan stop")
     elif message.content.upper().startswith('FUCK'):
         await client.send_message(message.channel, "Stop Swearing")
-    elif message.content.startswith('@EVERYONE'):
+    elif message.content.upper().startswith('@EVERYONE'):
         userID = message.author.id
         await client.send_message(message.channel, "<@%s> why are you pinging everyone so pointlessly?" % (userID))
 
