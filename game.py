@@ -13,8 +13,7 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    if message.content.upper().startswith('SUCK MY DICK') or message.content.upper().startswith('FUCK YOU') or message.content.upper().startswith('GO FUCK YOURSELF'):
-        await client.send_message(message.channel, "no, you")
+   
     elif message.content.upper().startswith('GO'):
         args = message.content.split(" ")
         print(args[1:])
@@ -30,8 +29,14 @@ async def on_message(message):
     
     args = message.content.split(" ")
     for word in args:
-        if word == ("fuck") or word == ("shit"):
-            await client.send_message(message.channel, "keep this christian please")
+
+        if word == ("fuck") or word == ("shit"):            
+            if message.content.upper().startswith('SUCK MY DICK') or message.content.upper().startswith('FUCK YOU') or message.content.upper().startswith('GO FUCK YOURSELF'):
+        	    await client.send_message(message.channel, "no, you")
+	    else:
+		    await client.send_message(message.channel, "keep this christian please")
+
+
 
 
         
