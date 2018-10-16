@@ -37,6 +37,8 @@ async def on_message(message):
             else:
                 async for msg in client.logs_from(message.channel, 1):
                     await client.add_reaction(msg, '😠')
+                    await client.add_reaction(msg, '🤬')
+                    await client.add_reaction(msg, '❌')
                 break
 
 
