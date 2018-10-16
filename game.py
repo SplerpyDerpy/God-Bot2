@@ -27,6 +27,11 @@ async def on_message(message):
     elif message.content.upper().startswith('@EVERYONE'):
         userID = message.author.id
         await client.send_message(message.channel, "<@%s> why are you pinging everyone so pointlessly?" % (userID))
+    
+    args = message.content.split(" ")
+    for word in args:
+        if word == ("fuck") or word == ("shit"):
+            await client.send_message(message.channel, "keep this christian please")
 
 
         
