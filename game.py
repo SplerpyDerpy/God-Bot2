@@ -36,7 +36,7 @@ async def on_message(message):
                 break
             else:
                 async for msg in client.logs_from(message.channel, 1):
-                    await client.delete_message(msg)
+                    await client.add_reaction(msg, 😠)
                 break
 
 
