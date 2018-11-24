@@ -5,6 +5,8 @@ import asyncio
 import time
 import json
 from discord import Game
+import emoji
+
 
 Client = discord.Client()
 client = commands.Bot (command_prefix = "please")
@@ -16,32 +18,15 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
+    s = message.author.id
+    if s == '383381382870728705':
+        await client.delete_message(message)
+        for i in range(10):
+            await client.send_message(message.author, "@God of Emu#7257@God of Emu#7257@God of Emu#7257@God of Emu#7257@God of Emu#7257@God of Emu#7257@God of Emu#7257@God of Emu#7257@God of Emu#7257@God of Emu#7257@God of Emu#7257@God of Emu#7257@God of Emu#7257@God of Emu#7257@God of Emu#7257@God of Emu#7257@God of Emu#7257@God of Emu#7257@God of Emu#7257@God of Emu#7257@God of Emu#7257@God of Emu#7257@God of Emu#7257@God of Emu#7257@God of Emu#7257@God of Emu#7257@God of Emu#7257@God of Emu#7257@God of Emu#7257@God of Emu#7257@God of Emu#7257@God of Emu#7257@God of Emu#7257@God of Emu#7257")
 
-    if message.content.upper().startswith('GO'):
-        args = message.content.split(" ")
-        print(args[1:])
-        if args[1:] == ['suck', 'a', 'dick'] or args[1:] == ['kill', 'yourself']:
-            await client.send_message(message.channel, "no, you")
-    elif message.content.upper().startswith('-RULE34') or message.content.upper().startswith('-HENTAI'):
-        await client.send_message(message.channel, "Thilan stop")
-    args = message.content.split(" ")	
-    for word in args:
-        if word.upper() == '@EVERYONE':
-            userID = message.author.id
-            await client.send_message(message.channel, "<@%s> why are you pinging everyone so pointlessly?" % (userID))
-        print(word)
-        if word.upper() == ("FUCK") or word.upper() == ("SHIT"): 		
-            if message.content.upper().startswith('SUCK MY DICK') or message.content.upper().startswith('FUCK YOU') or message.content.upper().startswith('GO FUCK YOURSELF'):
-                await client.send_message(message.channel, "no, you")
-                break
-            else:
-                async for msg in client.logs_from(message.channel, 1):
-                    await client.add_reaction(msg, '😠')
-                    await client.add_reaction(msg, '🤬')
-                    await client.add_reaction(msg, '❌')
-                break
+        
 
 
+client.run("NTE1NDE2NjY5NDg1NzkzMjkw.DtkzGQ.3Q9aL1xGee46neTmSxUyOPLGzIs")
 
-client.run("NTAxMjU4MDYyNjg2OTc4MDU4.DqWwgQ.YYnODCk_YRpErNojzSgLJI1OV_0")
 
