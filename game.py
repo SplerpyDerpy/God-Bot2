@@ -6,6 +6,7 @@ import time
 import json
 from discord import Game
 import emoji
+import os
 
 
 Client = discord.Client()
@@ -27,6 +28,6 @@ async def on_message(message):
         
 
 
-client.run("TOKEN")
+client.run(os.getenv("TOKEN"))
 
 
